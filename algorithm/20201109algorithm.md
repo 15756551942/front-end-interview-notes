@@ -6,7 +6,7 @@ var arr = [];
 var twoSum = function(nums, target) {
     var len = nums.length;
     for(var i=0;i<len-1;i++){
-        for(var j=1;j<len-1;j++){
+        for(var j=i+1;j<len;j++){
             if(nums[i] + nums[j] === target){
                 arr.push(i);
                 arr.push(j);
