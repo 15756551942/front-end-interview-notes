@@ -1,10 +1,10 @@
 ## 目录
 
  - [CSS选择器的优先级](#CSS选择器的优先级)
- - [重置(resetting)CSS和标化样(normalizing)CSS](#重置(resetting)CSS和标化样(normalizing)CSS)
+ - [重置(resetting)CSS和标化样(normalizing)CSS](#重置(resetting)CSS和标准化(normalizing)CSS)
  - [Float定位的工作原理](#Float定位的工作原理)
- - [块格式化上下文(Block Formatting Context)](#块格式化上下文(Block Formatting Context))
- - [元素的层级`z-indxe`](#元素的层级`z-indxe`)
+ - [块格式化上下文(Block Formatting Context)](#块格式化上下文(Block-Formatting-Context))
+ - [元素的层级`z-indxe`](#元素的层级z-indxe)
 
  ### CSS选择器的优先级
  * 选择器的权重：内联样式(1,0,0,0)，id选择器(0,1,0,0)，类和伪类选择器(0,0,1,0)，元素选择器(0,0,0,1)，通配选择器(0,0,0,0),继承的样式没有优先级
@@ -57,7 +57,7 @@
  }
  ```
 
- ### 块格式化上下文(`Block Formatting Context`)
+ ### 块格式化上下文(Block Formatting Context)
  * BFC是CSS中一个隐含的属性，可以为一个元素开启BFC，开启BFC该元素会变成一个独立的布局区域
  #### 元素开启BFC后的特点
  * 开启BFC的元素不会被浮动元素覆盖
