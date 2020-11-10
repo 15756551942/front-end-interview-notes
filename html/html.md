@@ -2,7 +2,7 @@
 
 - [`Doctype`(文档声明)](#Doctype(文档声明))
 - [描述`cookie`，`sessionStorage`以及`localStorage`之间的差异](#描述cookie，sessionStorage以及localStorage之间的差异)
-- [描述`<script>`，`<script async>`并`<script defer>`之间的差别](#描述script，script async并script defer之间的差别)
+- [描述`script`，`script` `async`和`script` `defer`之间的差别](#描述script，script-async和script-defer之间的差别)
 - [为什么CSS的`<link>`和JS的`<script>`要放置在`<head></head>`之间和`</body>`之前](#为什么CSS的<link>和JS的<script>要放置在<head></head>之间和</body>之前)
 - [描述`<img>`标签中的`srcset`属性](#描述<img>标签中的srcset属性)
 - [html5新特性](#html5新特性)
@@ -38,10 +38,10 @@ XHTML
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
 ```
 
-### 描述cookie，sessionStorage以及localStorage之间的差异
+### 描述`cookie`，`sessionStorage`以及`localStorage`之间的差异
 
 #### cookie
-cookie客户端保存用户信息的一种机制，用来记录用户的一些信息
+* cookie客户端保存用户信息的一种机制，用来记录用户的一些信息
 ##### cookie构成
 * name:一个唯一确定的cookie名称。通常来讲cookie的名称是不区分大小写的
 * value:存储在cookie中的字符串值。最好为cookie的name和value进行url编码
@@ -56,7 +56,7 @@ cookie客户端保存用户信息的一种机制，用来记录用户的一些�
 * 通过加密和安全传输技术，减少cookie被 破解的可能性。
 * 只有在cookie中存放不敏感的数据，即使被盗取也不会有很大的损失。
 * 控制cookie的生命期，使之不会永远有效。这样的话偷盗者很可能拿到的就是一个过期的cookie.
-#### cookie缺点
+##### cookie缺点
 * cookie的长度和数量的限制。每个domain最多只能有20条cookie,每个cookie长度不能超过4KB。否则会被截掉、
 * 安全性问题。如果cookie被人拦掉了，那个人就可以获取到所有session信息。加密的话也不起什么作用
 * 有些状态不可能保存在客户端。例如，为了防止重复提交表单，我们需要在服务端保存一个计数器。若把计数器保存到服务端，则起不到什么作用
@@ -64,17 +64,17 @@ cookie客户端保存用户信息的一种机制，用来记录用户的一些�
 * localStorage生命周期是永久,这意味着除非用户显示在浏览器提供的UL.上清除localStorage信息，否则这些信息将永远存在。存放数据大小为-般为5MB,而且它仅在客户端(即浏览器)中保存,不参与和服务器的通信
 * sessionStorage仅在当前会话下有效,关闭页面或浏览器后被清除。存放数据大小为一般为5MB,而且它仅在客户端(即浏览器)中保存，不参与和服务器的通信。
 
-### 描述script，script async并script defer之间的差别
+### 描述`script`，`script async`和`script defer`之间的差别
 * `<script>` 标签用于定义客户端脚本，比如JavaScript,在浏览器继续解析页面之前，立即读取并执行脚本
 * `<script>` 元素既可包含脚本语句，也可以通过"src" 属性指向外部脚本文件
 * `<script async>`脚本相对于页面的其余部分异步地执行
 * `<script defer>`脚本将在页面完成解析时执行
 
 ### 为什么CSS的`<link>`和JS的`<script>`要放置在`<head></head>`之间和`</body>`之前
-由于js的执行流程是由上到下依次执行的，将css的link标签放置在head标签之间和js的script标签放在</body>之前可以让浏览器在加载页面的时候正常显示
+* 由于js的执行流程是由上到下依次执行的，将css的link标签放置在head标签之间和js的script标签放在</body>之前可以让浏览器在加载页面的时候正常显示
 
-### `<img>`标签中使用srcset属性
-以逗号分隔的一个或多个字符串列表表明一系列用户代理使用的可能的图像
+### 描述`<img>`标签中的`srcset`属性
+* 以逗号分隔的一个或多个字符串列表表明一系列用户代理使用的可能的图像
 ```
 <img srcset="elva-fairy-320w.jpg 320w,
              elva-fairy-480w.jpg 480w,
